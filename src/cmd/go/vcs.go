@@ -714,6 +714,15 @@ var vcsPaths = []*vcsPath{
 		check:  noVCSSuffix,
 	},
 
+	// eBay Github
+	{
+		prefix: "github.corp.ebay.com/",
+		re:     `^(?P<root>github\.corp\.ebay\.com/(?P<p>.[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+))(/[A-Za-z0-9_.\-]+)*$`,
+		vcs:    "git",
+		repo:   "git@github.corp.ebay.com:{p}.git",
+		ping:   false,
+	},
+
 	// Bitbucket
 	{
 		prefix: "bitbucket.org/",
